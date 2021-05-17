@@ -1,5 +1,5 @@
 exports.handler = async () => {
-  console.log("Function Runing...");
+  console.log("Function Running...");
 
   const data = { name: "Naim", age: 20, job: "Front End Developer" };
 
