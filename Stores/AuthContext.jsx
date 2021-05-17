@@ -18,13 +18,13 @@ export const AuthContextProvider = ({ children }) => {
       console.log("Login...");
     });
 
-    // init netlify identity connection
-    netlifyIdentity.init();
-
     netlifyIdentity.on("logout", () => {
       setUser(null);
       console.log("Logout...");
     });
+
+    // init netlify identity connection
+    netlifyIdentity.init();
 
     return () => {
       netlifyIdentity.off("login");
