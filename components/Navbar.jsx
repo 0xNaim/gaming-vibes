@@ -29,7 +29,11 @@ export default function Navbar() {
                 Login/Signup
               </li>
             )}
-            {user && <li>{user.user_metadata.full_name}</li>}
+            {user && (
+              <li>
+                <h4>{user.user_metadata.full_name}</h4>
+              </li>
+            )}
             {user && (
               <li onClick={logout} className="btn">
                 Logout
